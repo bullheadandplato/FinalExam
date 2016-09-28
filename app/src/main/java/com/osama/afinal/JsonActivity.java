@@ -2,7 +2,6 @@ package com.osama.afinal;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -17,6 +16,7 @@ public class JsonActivity extends AppCompatActivity {
             "}]},{\"Ahmad\":[{ \"roll\" : \"13031519-113\" " +
             "}]}]"+
             "}]}";
+    String jsonExample="{\"Contacts\" : [ {\"person1\" : [{\"id\": \"130\", \"name\": \"Ahmad\"}]},{\"person2\" : [{\"id\" : \"190\" , \"name\" : \"osama\"}]}, {\"person3\" : [{\"id\" : \"32\" , \"name\" : \"hussnain\"}]}]}";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class JsonActivity extends AppCompatActivity {
         TextView jsonTextView=(TextView)findViewById(R.id.jsonTextView);
         jsonTextView.setText(" ");
         try {
-            JSONObject jsonObject=new JSONObject(myJson);
+         /*   JSONObject jsonObject=new JSONObject(myJson);
             JSONArray jsonArray=jsonObject.getJSONArray("Departments");
             for(int i=0;i<jsonArray.length();i++){
                 JSONObject newObject=jsonArray.getJSONObject(i);
@@ -38,6 +38,16 @@ public class JsonActivity extends AppCompatActivity {
                         JSONObject haha=google.getJSONObject(k);
                         jsonTextView.setText(jsonTextView.getText()+" "+haha.getString("roll"));
                     }
+                }
+            }*/
+            JSONObject contacts=new JSONObject(jsonExample);
+            JSONArray persons=contacts.getJSONArray("Contacts");
+            for (int i=0;i<persons.length();i++){
+                JSONObject person=persons.getJSONObject(i);
+                JSONArray personAttributes=person.getJSONArray(person.keys().next());
+                for (int j=0;j<personAttributes.length();j++){
+                    JSONObject attr=personAttributes.getJSONObject(j);
+                    jsonTextView.setText(jsonTextView.getText()+ " "+attr.getString("name"));
                 }
             }
         } catch (JSONException e) {
