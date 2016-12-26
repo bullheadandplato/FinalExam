@@ -16,7 +16,9 @@ public class JsonActivity extends AppCompatActivity {
             "}]},{\"Ahmad\":[{ \"roll\" : \"13031519-113\" " +
             "}]}]"+
             "}]}";
-    String jsonExample="{\"Contacts\" : [ {\"person1\" : [{\"id\": \"130\", \"name\": \"Ahmad\"}]},{\"person2\" : [{\"id\" : \"190\" , \"name\" : \"osama\"}]}, {\"person3\" : [{\"id\" : \"32\" , \"name\" : \"hussnain\"}]}]}";
+    String jsonExample="{\"Contacts\" : [ {\"person1\" :"+
+        " [{\"id\": \"130\", \"name\": \"Ahmad\"}]},{\"person2\" :"+
+        " [{\"id\" : \"190\" , \"name\" : \"osama\"}]}, {\"person3\" : [{\"id\" : \"32\" , \"name\" : \"hussnain\"}]}]}";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
