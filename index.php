@@ -22,8 +22,9 @@ include_once('header.php');
     <div id="header_section">
 
     </div>
+    <h1>Welcome! You have reached the website of Osama Bin Omar</h1>
 </div>
-<h1>Welcome! You have reached the website of Osama Bin Omar</h1>
+
 </body>
 </html>
 
