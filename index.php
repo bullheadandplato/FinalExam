@@ -15,17 +15,19 @@ include_once('header.php');
     <meta charset="UTF-8">
     <meta content="*/*">
     <link rel="stylesheet" href="index_style.css">
-
+    <script src="index.js"></script>
 </head>
 <body style="margin: 0 .5%">
 <div id="whole_page">
     <div id="header_section">
 
     </div>
-    <h1>Welcome! You have reached the website of Osama Bin Omar</h1>
+    <h1 id="welcome_message">Welcome! You have reached the website of Osama Bin Omar</h1>
+    <button onclick="animateText()">Osama</button>
 </div>
 
 </body>
+
 </html>
 
 
