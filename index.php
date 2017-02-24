@@ -14,8 +14,10 @@ include_once('header.php');
     <title>Osama Bin Omar</title>
     <meta charset="UTF-8">
     <meta content="*/*">
+    <link rel="stylesheet" href="index_style.css">
+
 </head>
-<body>
+<body style="margin: 0 .5%">
 <div id="whole_page">
     <div id="header_section">
 

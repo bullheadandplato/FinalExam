@@ -18,7 +18,7 @@
              padding: 0;
              overflow: hidden;
              background-color: #333;
-             box-shadow: 0 0 10px 10px #969696;
+             box-shadow: 0 0 5px 5px #969696;
              elevation: above;
          }
          ul.topnav li {float: left;}
