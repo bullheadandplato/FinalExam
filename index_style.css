@@ -1,7 +1,7 @@
 #whole_page{
  font-family: "3270Narrow Nerd Font";
 }
-#main_section_heading{
+.main_section_heading{
  font-family: "CodeNewRoman Nerd Font";
  color: #4CAF50;
  font-weight: bold;

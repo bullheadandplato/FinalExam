@@ -12,8 +12,10 @@ ini_set("display_errors", 1);
 //include files
 include_once('header.php');
 include_once('StringTest.php');
+include_once ('ArraysTest.php');
 
 $stringOperations=new StringTest();
+$arrayOperations=new ArraysTest();
 ?>
 
 <html>
@@ -30,10 +32,17 @@ $stringOperations=new StringTest();
 
     </div>
     <h1 id="welcome_message">Welcome! You have reached the website of Osama Bin Omar</h1>
-    <h1 id="main_section_heading">PHP Strings</h1>
-    <h1><?php echo $stringOperations->hereDocSyntax()?></h1>
-    <h1><?php echo $stringOperations->nowDocSyntax()?></h1>
-    <h1><?php echo $stringOperations->stringConversion()?></h1>
+
+    <h1 class="main_section_heading">PHP Strings</h1>
+    <h2><?php echo $stringOperations->hereDocSyntax()?></h2>
+    <h2><?php echo $stringOperations->nowDocSyntax()?></h2>
+    <h2><?php echo $stringOperations->stringConversion()?></h2>
+
+    <h1 class="main_section_heading">PHP Arrays</h1>
+    <h2><?php echo $arrayOperations->arrayComplexSyntax() ?></h2>
+    <h2><?php print_r($arrayOperations->keyValueArray())?></h2>
+    <h2><?php print_r($arrayOperations->indexedArray())?></h2>
+    <h2><?php print_r($arrayOperations->multiDimensionArray())?></h2>
 
     <button onclick="animateText()">Osama</button>
 </div>
