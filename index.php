@@ -49,6 +49,7 @@ $otherOperations=new AllOthers();
     <h1 class="main_section_heading"> PHP Others</h1>
     <h2><?php echo "Value of constant is: ".AllOthers::GOOGLE;  ?></h2>
     <h2><?php printf ("Variable function example {%s} ",$otherOperations->variableExample())?></h2>
+    <h2><?php printf ("Anon function output { %s }",$otherOperations->anonInMe())?></h2>
 
     <button onclick="animateText()">Osama</button>
 </div>

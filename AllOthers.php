@@ -64,4 +64,12 @@ class AllOthers
     function callMe(){
         return "Im called from a variable name.";
     }
+    function anonInMe(){
+        $that=0;
+        $var=function (&$that){
+             $that="I'm an anonymous function";
+        };
+        $var($that);
+        return $that;
+    }
 }
