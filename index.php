@@ -13,9 +13,11 @@ ini_set("display_errors", 1);
 include_once('header.php');
 include_once('StringTest.php');
 include_once ('ArraysTest.php');
+include_once ('AllOthers.php');
 
 $stringOperations=new StringTest();
 $arrayOperations=new ArraysTest();
+$otherOperations=new AllOthers();
 ?>
 
 <html>
@@ -43,6 +45,10 @@ $arrayOperations=new ArraysTest();
     <h2><?php print_r($arrayOperations->keyValueArray())?></h2>
     <h2><?php print_r($arrayOperations->indexedArray())?></h2>
     <h2><?php print_r($arrayOperations->multiDimensionArray())?></h2>
+
+    <h1 class="main_section_heading"> PHP Others</h1>
+    <h2><?php echo "Value of constant is: ".AllOthers::GOOGLE;  ?></h2>
+    <h2><?php printf ("Variable function example {%s} ",$otherOperations->variableExample())?></h2>
 
     <button onclick="animateText()">Osama</button>
 </div>
