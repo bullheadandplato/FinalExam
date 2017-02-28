@@ -1,3 +1,8 @@
 #whole_page{
  font-family: "3270Medium Nerd Font";
 }
+#main_section_heading{
+ font-size: larger;
+ color: #4CAF50;
+ font-weight: bold;
+}

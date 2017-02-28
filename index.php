@@ -30,6 +30,7 @@ $stringOperations=new StringTest();
 
     </div>
     <h1 id="welcome_message">Welcome! You have reached the website of Osama Bin Omar</h1>
+    <h1 id="main_section_heading">PHP Strings</h1>
     <h1><?php echo $stringOperations->hereDocSyntax()?></h1>
     <h1><?php echo $stringOperations->nowDocSyntax()?></h1>
     <h1><?php echo $stringOperations->stringConversion()?></h1>
