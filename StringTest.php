@@ -48,10 +48,10 @@ EOD;
         $int3=(int)$string3;
 
         $string=<<<EOD
-            Strings can be casted to integers.
-            '(int) $string1 ' will evaluate to $int1.
-            '(int) $string2 ' will evaluate to $int2;
-            '(int) $string3 ' will evaluate to $int3;
+            Strings can be casted to integers.\n
+            '(int) $string1 ' will evaluate to $int1.\n
+            '(int) $string2 ' will evaluate to $int2.\n
+            '(int) $string3 ' will evaluate to $int3.\n
              A string value will always evaluate to 0 unless it starts with a numeric value (such as “10 years”).
 EOD;
         return $string;
