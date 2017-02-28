@@ -36,6 +36,25 @@ EOD;
         return $string;
     }
 
+    /**
+     * @return string explaining the conversion of strings to integers.
+     */
+    function stringConversion(){
+        $string1="10goals";
+        $string2="goals";
+        $string3="goals10";
+        $int1=(int) $string1;
+        $int2=(int)$string2;
+        $int3=(int)$string3;
 
+        $string=<<<EOD
+            Strings can be casted to integers.
+            '(int) $string1 ' will evaluate to $int1.
+            '(int) $string2 ' will evaluate to $int2;
+            '(int) $string3 ' will evaluate to $int3;
+             A string value will always evaluate to 0 unless it starts with a numeric value (such as “10 years”).
+EOD;
+        return $string;
+    }
 
 }
