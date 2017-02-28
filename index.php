@@ -10,14 +10,17 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 //include files
-include_once('header.php');
-include_once('StringTest.php');
+include_once ('header.php');
+include_once ('StringTest.php');
 include_once ('ArraysTest.php');
 include_once ('AllOthers.php');
+include_once ('AbstractClass.php');
+include_once ('ConcreteClass.php');
 
-$stringOperations=new StringTest();
-$arrayOperations=new ArraysTest();
-$otherOperations=new AllOthers();
+$stringOperations   = new StringTest();
+$arrayOperations    = new ArraysTest();
+$otherOperations    = new AllOthers();
+$absClass=new ConcreteClass();
 ?>
 
 <html>
@@ -50,6 +53,9 @@ $otherOperations=new AllOthers();
     <h2><?php echo "Value of constant is: ".AllOthers::GOOGLE;  ?></h2>
     <h2><?php printf ("Variable function example {%s} ",$otherOperations->variableExample())?></h2>
     <h2><?php printf ("Anon function output { %s }",$otherOperations->anonInMe())?></h2>
+
+    <h1 class="main_section_heading">PHP Classes</h1>
+    <h2><?php printf("This value is from abstract class { %s }",$absClass->tryMe()); ?></h2>
 
     <button onclick="animateText()">Osama</button>
 </div>

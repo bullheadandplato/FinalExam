@@ -8,8 +8,11 @@
  */
 class AllOthers
 {
+
     //constants
     const GOOGLE="google";
+
+
 
     /**
      * @return string. function with return typed explicitly defined
