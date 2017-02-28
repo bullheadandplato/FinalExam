@@ -6,7 +6,7 @@
  * Time: 10:17 PM
  */
 //set error reporting
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 ini_set("display_errors", 1);
 
 //include files
@@ -16,11 +16,14 @@ include_once ('ArraysTest.php');
 include_once ('AllOthers.php');
 include_once ('AbstractClass.php');
 include_once ('ConcreteClass.php');
+include_once ('OverLoaded.php');
 
 $stringOperations   = new StringTest();
 $arrayOperations    = new ArraysTest();
 $otherOperations    = new AllOthers();
-$absClass=new ConcreteClass();
+$absClass           = new ConcreteClass();
+$overloadingTest    = new OverLoaded();
+
 ?>
 
 <html>
@@ -58,7 +61,12 @@ $absClass=new ConcreteClass();
     <h2><?php printf("This value is from abstract class { %s }",$absClass->tryMe()); ?></h2>
     <h2><?php printf("Lets see which add is being called { %s }",$absClass->add()) ?></h2>
     <h2><?php echo "Anonymous class example: ".$otherOperations->anonClass()->getVar()?></h2>
-    <h2><?php echo "inner and anonymous example: ".$otherOperations->anonClass()->inInClass()->getVar();?></h2
+    <h2><?php echo "inner and anonymous example: ".$otherOperations->anonClass()->inInClass()->getVar();?></h2>
+
+    <h1 class="main_section_heading">PHP Overloading</h1>
+    <h2><?php echo "__get() Test: $overloadingTest->test"?></h2>
+    <h2><?php echo "__call() Test: ".$overloadingTest->gogle(10)?></h2>
+
     <button onclick="animateText()">Osama</button>
 </div>
 
