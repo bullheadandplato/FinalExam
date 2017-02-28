@@ -75,4 +75,42 @@ class AllOthers
         $var($that);
         return $that;
     }
+
+    function anonClass(){
+        $innerClass=new class(){
+            var $var;
+          function __construct()
+          {
+              $this->var= "Instance of anon class created.";
+          }
+
+            /**
+             * @return string
+             */
+            public function getVar(): string
+            {
+                return $this->var;
+            }
+
+            public function inInClass(){
+                $moreIn=new class(){
+                    var $var;
+                  function __construct()
+                  {
+                      $this->var="im too much anonymous and inner";
+                  }
+
+                    /**
+                     * @return string
+                     */
+                    public function getVar(): string
+                    {
+                        return $this->var;
+                    }
+                };
+                return $moreIn;
+            }
+        };
+        return $innerClass;
+    }
 }

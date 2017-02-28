@@ -56,7 +56,9 @@ $absClass=new ConcreteClass();
 
     <h1 class="main_section_heading">PHP Classes</h1>
     <h2><?php printf("This value is from abstract class { %s }",$absClass->tryMe()); ?></h2>
-
+    <h2><?php printf("Lets see which add is being called { %s }",$absClass->add()) ?></h2>
+    <h2><?php echo "Anonymous class example: ".$otherOperations->anonClass()->getVar()?></h2>
+    <h2><?php echo "inner and anonymous example: ".$otherOperations->anonClass()->inInClass()->getVar();?></h2
     <button onclick="animateText()">Osama</button>
 </div>
 

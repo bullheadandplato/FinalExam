@@ -6,6 +6,8 @@
  * Date: 2/28/17
  * Time: 5:46 PM
  */
+
+
 class ConcreteClass extends AbstractClass
 {
 
@@ -17,5 +19,15 @@ class ConcreteClass extends AbstractClass
     public function anOther()
     {
         // TODO: Implement anOther() method.
+    }
+
+    function name()
+    {
+        // TODO: Implement name() method.
+    }
+
+    function rollNumber()
+    {
+        // TODO: Implement rollNumber() method.
     }
 }
