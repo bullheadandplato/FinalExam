@@ -7,6 +7,16 @@
  */
 //include header file
 include_once('header.php');
+function showString(){
+    $variable=10;
+    $string=<<<EOD
+            Hello, the universe is dying.
+            We need to save it by substituting a $variable.
+            But can I do \n in this and "Osama" is just 'simple'.
+EOD;
+echo "<h1>$string</h1>";
+
+}
 ?>
 
 <html>
@@ -23,6 +33,7 @@ include_once('header.php');
 
     </div>
     <h1 id="welcome_message">Welcome! You have reached the website of Osama Bin Omar</h1>
+    <?php showString()?>
     <button onclick="animateText()">Osama</button>
 </div>
 
